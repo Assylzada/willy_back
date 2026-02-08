@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Willy Wonka — Magical Factory</title>
+  <link rel="stylesheet" href="style2.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="willy.js" defer></script>
+</head>
+<body>
+  <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="themeToggle">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider round"></span>
+  </label>
+ </div>
+
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo-circle">W</div>
+          <span>Wonka Factory</span>
+        </div>
+
+        <div class="menu" id="mainMenu">
+          <a href="#" class="active">Home</a>
+          <a href="index1.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="index.html">Account</a>
+          <a href="#registerForm">Apply</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h2>Welcome  <span id="userName"></span> to Willy Wonka’s Magical World </h2>
+
+        <button id="confettiBtn" class="wonka-btn">Celebrate!</button>
+        <div id="confettiContainer"></div>
+
+        <audio id="confettiSound" preload="auto">
+          <source src="magic sound.mp3" type="audio/mpeg">
+        </audio>
+
+        <p>Chocolate, gold and starlight. A factory where magic and luxury meet in every detail.</p>
+        <a href="#shop" class="btn">Visit Shop</a>
+        <div class="ticket">
+          <img src="photo/gt.png" alt="Golden Ticket"/>
+        </div>
+      </div>
+      <div>
+        <img src="photo/wonka.png" alt="Chocolate"/>
+      </div>
+    </section>
+
+    <section id="about" class="grid">
+      <div>
+        <h3>About the Factory</h3>
+        <p style="margin:10px 0">
+          Our factory is about textures, aromas, and shimmering magic. 
+          The spell of chocolate in every corner.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <img src="photo/rec.png" width="150" alt="Recipes">
+            <h3>Recipes</h3>
+            <p>Rare cocoa beans and enchanted fillings.</p>
+            <a href="shop.html"><button>Recipes</button></a>
+          </div>
+          <div class="card">
+            <img src="photo/milkchoco.png" width="150" alt="Tickets">
+            <h3>Tickets</h3>
+            <p>Limited golden tickets glowing with charm.</p>
+            <a href="#registerForm"><button>Register</button></a>
+          </div>
+          <div class="card">
+            <img src="photo/test.png" width="150" alt="Tastings">
+            <h3>Tastings</h3>
+            <p>Personal magical journeys for connoisseurs.</p>
+            <a href="shop.html"><button>Shop</button></a>
+          </div>
+          <div class="card">
+            <img src="photo/pack.png" width="150" alt="Packaging">
+            <h3>Packaging</h3>
+            <p>Magnificent design with stardust details.</p>
+            <a href="index.html"><button>Factory</button></a>
+          </div>
+        </div>
+      </div>
+      <aside id="shop" class="shop">
+      <input type="text" id="shopSearch" placeholder="🔍 Search chocolates...">
+      <h3>Shop</h3>
+
+        <div class="shop-item">
+          <img src="photo/bar.png" alt="Truffle"/>
+          <div>
+            <strong>Premium milk chocolate Wonka</strong>
+            <div class="price">$12</div>
+          </div>
+        </div>
+
+          <div id="wonkaStats">
+            <div class="counter" data-target="1000">0</div>
+            <p>🍬 Magical visitors</p>
+          </div>
+    </aside>
+
+    </section>
+
+
+    <section id="gallery" class="gallery-section">
+    <h2>Magic Moments Gallery</h2>
+    <div class="gallery" id="galleryContainer">
+      <div class="gallery-item"><img src="photo/bignightout.png" alt=""><div class="caption">Big Night Out</div></div>
+      <div class="gallery-item"><img src="photo/silver.png" alt=""><div class="caption">Silver Lightning</div></div>
+      <div class="gallery-item"><img src="photo/fourty.png" alt=""><div class="caption">Forty Second Sweet</div></div>
+    </div>
+    
+  </section>
+
+
+<br>
+    <div class="container2">
+      <h2>Golden Ticket Form</h2>
+
+      <form id="registerForm">
+        <div class="form-step active">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" required>
+          <button type="button" class="next">Next →</button>
+        </div>
+
+        <div class="form-step">
+          <label for="passport">Ticket Number:</label>
+          <input type="text" id="passport" required placeholder="e.g., AB1234">
+          <div class="buttons">
+            <button type="button" class="back">← Back</button>
+            <button type="button" class="next">Next →</button>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+          <div class="buttons">
+            <button type="button" class="back">← Back</button>
+            <button type="button" class="next">Next →</button>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <label for="test_date">Date:</label>
+          <input type="date" id="test_date">
+          <div class="buttons">
+            <button type="button" class="back">← Back</button>
+            <button type="button" class="next">Next →</button>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <label for="city">Your City:</label>
+          <select id="city" name="city" required>
+            <option value="">--Select City--</option>
+            <option>Almaty</option>
+            <option>Astana</option>
+            <option>Shymkent</option>
+            <option>Aktobe</option>
+            <option>Aktau</option>
+            <option>Atyrau</option>
+            <option>Pavlodar</option>
+            <option>Semey</option>
+            <option>Oral</option>
+            <option>Turkistan</option>
+            <option>Oskemen</option>
+          </select>
+          <div class="buttons">
+            <button type="button" class="back">← Back</button>
+            <button type="submit">✨ Register</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="successMsg" class="hidden">
+        🎉 Thank you, your Golden Ticket has been registered!
+      </div>
+      <button id="openPopup">Subscribe</button>
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Subscribe to Newsletter</h2>
+        <form id="popupForm">
+          <input type="email" id="popupEmail" placeholder="Enter your email" required><br><br>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    </div>
+    
+
+    <section id="wonkaInteractive" class="wonka-section">
+      <h2>✨ Interactive Wonka Experience ✨</h2>
+
+      <!-- 1️⃣ Star Rating -->
+      <div class="stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <p id="ratingMessage"></p>
+
+      <!-- 3️⃣ Random Quote -->
+      <button id="quoteBtn" class="wonka-btn">Get Random Wonka Quote</button>
+      <p id="quoteArea" class="quote"></p>
+
+      <br>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © Willy Wonka Factory — demo site, no real payments
+  </footer>
+
+</body>
+</html>

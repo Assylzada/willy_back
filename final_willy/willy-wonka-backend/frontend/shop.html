@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Willy Wonka's Chocolates — Shop</title>
+  <meta name="description" content="Willy Wonka's shop" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="navbar">
+    <div class="nav-logo">W</div>
+    <nav class="nav-links">
+      <a href="willy.html" class="active">Home</a>
+      <a href="index1.html">About</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
+
+  <!-- ===== LAYOUT WRAPPER ===== -->
+  <div class="wrap">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="sidebar">
+      <div class="brand">
+        <div>
+          <div class="site-name">Wonka's Chocolates</div>
+          <div class="site-sub">Handcrafted happiness</div>
+        </div>
+      </div>
+
+      <div class="open-hours">
+        <strong>Open hours</strong>
+        <div>Every day — 9:00 — 21:00</div>
+      </div>
+
+
+      <!-- 🛒 CART SECTION -->
+      <div id="cartSection" class="cart">
+        <h3>🛒 Your Wonka Cart</h3>
+        <div id="cartItems"></div>
+        <button id="clearCart" class="clear-btn">Clear Cart</button>
+      </div>
+
+
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="themeToggle">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="title">Welcome to Willy Wonka's Chocolates</div>
+          <div class="lead">Magical, small-batch chocolates — lovingly crafted. 
+        </div>
+
+
+          <!-- ===== SHOP PRODUCTS ===== -->
+          <div class="cards-row" id="shop">
+            <!-- Product 1 -->
+            <article class="card">
+              <img src="photo/silver.png" alt="Silver Lightning"/>
+              <div class="meta">
+                <div class="name">Silver Lightning</div>
+                <div class="price">$12</div>
+              </div>
+              <p class="desc">Rich dark chocolate with a liquid caramel heart infused with sea salt.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="silver-lightning" />
+                <button class="btn-primary">Buy — $12</button>
+              </form>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="card">
+              <img src="photo/bignightout.png" alt="Big Night Out"/>
+              <div class="meta">
+                <div class="name">Big Night Out Candy</div>
+                <div class="price">$9</div>
+              </div>
+              <p class="desc">Milk chocolate studded with popping candy and freeze-dried raspberries.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="big-night-out" />
+                <button class="btn-primary">Buy — $9</button>
+              </form>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="card">
+              <img src="photo/bar.png" alt="Wonka Cocoa Box"/>
+              <div class="meta">
+                <div class="name">Wonka Cocoa Box</div>
+                <div class="price">$26</div>
+              </div>
+              <p class="desc">A bar of chocolate — espresso, hazelnut, orange blossom and more.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="wonka-cocoa-box" />
+                <button class="btn-primary">Buy — $26</button>
+              </form>
+            </article>
+            
+            <!-- Product 4 -->
+            <article class="card">
+              <img src="photo/mint.png" alt="Mint"/>
+              <div class="meta">
+                <div class="name">Wonka Mint Candy</div>
+                <div class="price">$9</div>
+              </div>
+              <p class="desc">Milk chocolate studded with popping candy and mint.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="wonka-cocoa-box" />
+                <button class="btn-primary">Buy — $9</button>
+              </form>
+            </article>
+            
+            <!-- Product 5 -->
+            <article class="card">
+              <img src="photo/hair.png" alt="Wonka Cocoa Box"/>
+              <div class="meta">
+                <div class="name">Wonka Hair Repair Chocolate</div>
+                <div class="price">$13</div>
+              </div>
+              <p class="desc">Dark chocolate eclair studded with popping candy and freeze-dried raspberries.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="wonka-cocoa-box" />
+                <button class="btn-primary">Buy — $13</button>
+              </form>
+            </article>
+            
+            <!-- Product 6 -->
+            <article class="card">
+              <img src="photo/bar.png" alt="Sweet"/>
+              <div class="meta">
+                <div class="name">Wonka Forty Second Candy</div>
+                <div class="price">$29</div>
+              </div>
+              <p class="desc">White chocolate studded with popping red candies and unique decorations.</p>
+              <form action="#checkout" method="get">
+                <input type="hidden" name="product" value="wonka-cocoa-box" />
+                <button class="btn-primary">Buy — $29</button>
+              </form>
+            </article>
+          </div>
+
+          <!-- ===== GALLERY ===== -->
+          <section id="gallery" class="gallery-section">
+            <h2>Magic Moments Gallery</h2>
+            <div class="gallery">
+              <div class="gallery-item"><img src="photo/bignightout.png" alt=""><div class="caption">Big Night Out</div></div>
+              <div class="gallery-item"><img src="photo/silver.png" alt=""><div class="caption">Silver Lightning</div></div>
+              <div class="gallery-item"><img src="photo/fourty.png" alt=""><div class="caption">Forty Second Sweet</div></div>
+              <div class="gallery-item"><img src="photo/giraffe.png" alt=""><div class="caption">Macaroon</div></div>
+              <div class="gallery-item"><img src="photo/mint.png" alt=""><div class="caption">Mint Bar</div></div>
+              <div class="gallery-item"><img src="photo/hair.png" alt=""><div class="caption">Hair Repair Eclair</div></div>
+              <div class="gallery-item"><img src="photo/wonk.png" alt=""><div class="caption">Wonka</div></div>
+              <div class="gallery-item"><img src="photo/bar.png" alt=""><div class="caption">Wonka Bar</div></div>
+              <div class="gallery-item"><img src="photo/cake.png" alt=""><div class="caption">Cake</div></div>
+            </div>
+          </section>
+
+      <section id="checkout" class="checkout" aria-label="checkout">
+        <h3>Order & Checkout</h3>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px">
+          Fill in your details to finalize your magical order.
+        </p>
+
+        <form id="checkoutForm">
+          <div class="form-step active">
+            <div class="field">
+              <input id="name" name="name" placeholder="Full name" required />
+              <input id="email" name="email" type="email" placeholder="Email address" required />
+            </div>
+            <br>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="form-step">
+            <div class="field">
+              <input id="address" name="address" placeholder="Shipping address" required />
+            </div>
+            <br>
+            <button type="button" class="back-btn">Back</button>
+            <button type="submit" class="btn-primary">Place Order</button>
+          </div>
+        </form>
+
+        <div id="message" style="margin-top:10px;font-size:14px; font-weight: bold;"></div>
+      </section>
+        </div>
+
+        <!-- ===== BEST SELLERS / ASIDE ===== -->
+        <aside class="best-sellers">
+          <img src="photo/wonka.png" alt="Main"/>
+          <h4>Best sellers</h4>
+          <div class="best-items">
+            <div>Wonka Cocoa Box — $26</div>
+            <div>Silver Lightning — $12</div>
+            <div>Big night out — $9</div>
+          </div>
+
+          <!-- ===== ACCORDION ===== -->
+          <div class="accordion">
+            <div class="item">
+              <div class="question">Is online shipping available worldwide?</div>
+              <div class="answer">Yes, online shipping is available worldwide</div>
+            </div>
+            <div class="item">
+              <div class="question">Do you have home delivery??</div>
+              <div class="answer">Unfortunately, only for your nearest post office.</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <footer>
+        © Willy Wonka's Chocolates — handcrafted with a little magic
+      </footer>
+    </main>
+  </div>
+
+  <!-- Script -->
+  <script src="shopp.js" defer></script>
+
+</body>
+</html>

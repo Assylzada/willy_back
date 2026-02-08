@@ -1,0 +1,182 @@
+/* ---------- Root Theme Variables ---------- */
+:root {
+  --choco-dark: #1a0b2e;     /* dark violet */
+  --choco-mid: #311044;      /* deep mystical */
+  --choco-light: #a974ff;    /* shining lilac */
+  --gold: #f5e77a;           /* magical gold */
+  --cream: #fefbf3;          /* soft light */
+  --muted: #8c78a5;          /* muted violet-gray */
+  --radius: 18px;
+  --max-width: 1100px;
+}
+
+/* ---------- Global Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Body ---------- */
+body {
+  background: radial-gradient(circle at 30% 30%, var(--choco-light), var(--choco-mid), var(--choco-dark));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ---------- Auth Container ---------- */
+.auth-container {
+  background: var(--cream);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container h1 {
+  font-size: 1.9rem;
+  color: var(--choco-dark);
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Form Elements ---------- */
+.form-box input {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1.5px solid var(--muted);
+  background: #fff;
+  font-size: 1rem;
+  color: var(--choco-dark);
+  transition: all 0.25s ease;
+}
+
+.form-box input:focus {
+  border-color: var(--choco-light);
+  box-shadow: 0 0 5px var(--choco-light);
+  outline: none;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  width: 100%;
+  background: var(--choco-light);
+  color: white;
+  border: none;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--gold);
+  color: var(--choco-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Text + Links ---------- */
+p {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+a {
+  color: var(--choco-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Tablets (≤900px) */
+@media (max-width: 900px) {
+  .auth-container {
+    padding: 35px 25px;
+    max-width: 350px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.7rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Phones (≤600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .auth-container {
+    padding: 30px 20px;
+    max-width: 320px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .auth-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-box input {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Phones (≤400px) */
+@media (max-width: 400px) {
+  .auth-container {
+    padding: 25px 18px;
+    max-width: 290px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

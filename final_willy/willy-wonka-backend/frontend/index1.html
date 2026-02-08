@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Willy Wonka</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">W</div>
+    <nav class="nav-links">
+      <a href="willy.html" class="active">Home</a>
+      <a href="index1.html">About</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
+<div id="scrollBar"></div>
+
+<div class="layout-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+            <h1 class="site-title">Willy Wonka's World</h1>
+
+            <div class="sidebar-card">
+                <img class="profile-img-mini" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmOA8Z5c2h_FUyDk2dm1uB4H5FSmbnzgFnw&s" alt="Wonka">
+            </div>
+
+            <div class="theme-box">
+                <div class="theme-toggle">
+                  <input type="checkbox" id="themeToggle">
+                  <label for="themeToggle" class="toggle-label"></label>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="content-grid">
+            
+            <section class="about-box hero-section">
+                <h2 class="section-title">A World Where Logic is a Four-Letter Word</h2>
+                <div class="who-text">
+                    <p>Welcome to the headquarters of the impossible. At Wonka’s World, we don’t just manufacture sweets; we harvest dreams and bottle lightning. Founded on the belief that a 'zest for the unknown' is the primary ingredient in every recipe, our factory serves as a sanctuary for the curious.
+
+We believe that the world is far too serious, and our mission is simple: to provide a delicious escape. From the depths of the Loompaland jungles to the heights of the Great Glass Elevator, every inch of our process is fueled by wonder. Step inside—but leave your 'sensible shoes' at the door.</p>
+                </div>
+            </section>
+
+            <section class="about-box factory-highlight side-by-side">
+                <div class="factory-content">
+                    <div class="factory-text">
+                        <h2 class="section-title">The Man, The Myth, The Marshmallow</h2>
+                        <p>Willy Wonka’s World began with a single cocoa bean and a very large dream. Tired of the drab, flavorless world of traditional confectionery, Mr. Wonka set out to create a place where waterfalls are edible and grass tastes like peppermint..</p>
+                    </div>
+                    <div class="factory-image-container">
+                        <img class="factory-img-small" src="https://www.studiodesursulines.com/wp-content/uploads/2025/09/wonka16x9-e1758278440246.jpg" alt="Factory">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-box full-width">
+                <h2 class="section-title">Willy Wonka Through the Years</h2>
+                <div class="gallery-search">
+                    <input type="text" id="wonkaSearch" placeholder="Search Wonka by year...">
+                </div>
+                <div class="gallery">
+                    <figure> <img src="https://deadline.com/wp-content/uploads/2025/07/Wonka_KA_EXternal-Marketing_APPROVED34.png" alt="1971"><figcaption>1971</figcaption></figure>
+                    <figure> <img src="https://w0.peakpx.com/wallpaper/1012/654/HD-wallpaper-charlie-and-the-chocolate-factory-willy-wonka-movies-johnny-depp-actors-johnny-depp-actor.jpg" alt="2005"><figcaption>2005</figcaption></figure>
+                    <figure> <img src="https://m.media-amazon.com/images/M/MV5BMDRlOWE4OGEtMmQwOS00NGJjLWI4NDUtZjQ2ZDU3M2IxYzIzXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg" alt="2023"><figcaption>2023</figcaption></figure>
+                    </div>
+            </section>
+
+            <section class="about-box contact-section">
+                <h2 class="section-title">Send a Golden Ticket</h2>
+                <form id="contactForm" class="contact-form">
+                    <input id="name" type="text" placeholder="Your name">
+                    <input id="email" type="email" placeholder="Email">
+                    <textarea id="message" rows="3" placeholder="Write your sweetest thought..."></textarea>
+                    <button class="btn form-btn" type="submit">Send Ticket</button>
+                </form>
+            </section>
+
+            <section class="about-box mood-panel">
+                <h2 class="section-title">Factory Atmosphere Control</h2>
+                <div class="mood-grid">
+                    <button onclick="setMood('chocolate')" class="btn form-btn">Chocolate Flow</button>
+                    <button onclick="setMood('magic')" class="btn form-btn">Pure Imagination</button>
+                    <button onclick="setMood('chaos')" class="btn form-btn">Oompa Chaos</button>
+                </div>
+            </section>
+
+        </div>
+        
+        <footer class="footer">
+            <p>© 2025 Assylay Shukirbay. All rights reserved.</p>
+        </footer>
+    </main>
+</div>
+
+<!--Script Connection -->
+<script src="script3.js" ></script>
+</body>
+</html>
